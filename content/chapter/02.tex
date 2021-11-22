@@ -1,0 +1,87 @@
+%!TEX root = ../../main.tex
+
+\chapter{Geplanter Aufbau der Arbeit}
+\section{Einleitung}
+Die Einleitung soll aus einer Problemstellung und einer Zielsetzung bestehen.
+Die Problemstellung wird einen ungewöhnlich großen Umfang einnehmen müssen, um die Forschungsarbeit zeitgeschichtlich in der Pandemie einzuordnen.
+Die Pandemielage, sowie ergriffene Maßnahmen, wissenschaftliche Erkenntnisse und die öffentliche Meinung verändern sich wöchentlich.
+Hierdurch wird es notwendig, die Lage zum Entstehungszeitpunkt der Arbeit einzuordnen und zu beschreiben.
+Veränderungen während des Erstellungszeitraums sind zu erwarten, wodurch voraussichtlich eine Beschreibung der Entwicklung erforderlich wird.
+Die Zielsetzung beschreibt die Forschungsfragen und das Ziel der Arbeit.
+Sie wird sich in großen Teilen am vorliegenden Research Proposal orientieren.
+
+\section{Covid19-Testung}
+Das ersten Hauptkapitel soll die aktuellen Erkenntnisse zu den Tests auf eine Covid19-Infektion beschreiben.
+Zentrale Themen werden die Genauigkeit und Fehlerquoten der Tests sein (Sensitivität/Spezifität).
+Im Folgenden werden die Möglichkeiten erörtert, einen Test für mehrere Personen zu verwenden und welchen Effekt dies nach aktueller Erkenntnis auf die Fehleranfälligkeit der Tests hat.
+Grundlegende Prämisse der Arbeit ist, dass es möglich ist die Proben mehrerer Personen für einen PCR-Test zu kombinieren und gemeinsam auszuwerten.
+Die Praxis an Schulen sowie das Funktionsprinzip eines PCR-Tests legen diese Möglichkeit nahe.
+
+\section{Bestehende PCR-Pooling-Verfahren}
+Im Laufe der Pandemie wurden von vielen Forschungsgruppen und Laboren Methoden entwickelt, um PCR-Pooling durchzuführen.
+Die Skalierung ist hier sehr unterschiedlich.
+Es gibt widersprüchliche Aussagen dazu, wie robust das PCR-Verfahren gegen Verwässerung der Proben ist.
+Einige behaupten man könne maximal 5 Personen gemeinsam testen. \cite{Quelle}
+Andere testen 25-40 Personen gemeinsam. \cite{Quelle}
+
+In Deutschland haben lt. dem Ärzteblatt die Blutspendedienste am meisten Erfahrung mit PCR-Pooling-Verfahren. \cite{Ärzteblatt}
+Seit Jahrzehnten kommen hier Pooling-Verfahren zum EInsatz, um Blutspenden auf HIV und Hepatitis zu testen.
+Die Blutspendedienste haben hierfür auch ein Patent angemeldet. \cite{Patent Blutspende}
+Die Methode dieses Patents wird als aktuellen Stand in Deutschland angenommen und soll die Basis für den Vergleich anderer Verfahren sein.
+
+\section{Fehlerkorrektur-Programmierung (ECC) in der Informatik}
+In der Informatik stellt sich bereits seit langem das Problem, Fehler in Speichern und bei Signalübertragung zu erkennen und zu korrigieren.
+Dies wird über unterschiedliche - dem Anwendungsfall angepasste - Paritätsalgorithmen erreicht.
+Ziel hierbei ist immer, den Overhead durch die Parität gering zu halten und zeitgleich die Integrität der Daten sicherzustellen.
+Einhergehend damit muss eine Abwägung getroffen werden, in welchem Umfang Fehler und Datenverlust akzeptabel sind.
+
+Der Hamming Code war einer der ersten ECC-Algorithmen und wurde in den 1950ern von Richard W. Hamming entwickelt.
+Seine Verteilung der Paritäts-Bits ermöglicht eine effiziente Überprüfung der Daten.
+Durch Verwendung von N+1 Paritäts-Bits, kann die Integrität von 2-hoch-N Daten zu überprüfen  werden.
+Die Berichtigung einzelner Bitfehler ist ebenfalls möglich.
+Sollte mehr als ein Fehler innerhalb des Blocks auftreten, kann dieser zwar erkannt, aber nicht berichtigt werden.
+
+Für einen Speicherbereich mit 256 Bit werden somit 8+1 Paritäts-Bits benötigt, was einem Overhead von nur 3,5 Prozent entspricht.
+Neuere Algorithmen haben die Effizient weiter gesteigert und sollen im Laufe der Arbeit vergleichen werden.
+
+\section{Modellerstellung}
+Geprüft werden soll die Übertragbarkeit mehrerer in der Informatik gängigen ECC-Algorithmen auf den medizinischen Bereich.
+Die Theorie wäre, dass Covid-Infektionen bei anlasslosen Testungen wie auch Bitfehler selten sind.
+Somit könnten dieselben Algorithmen zur Effizienzsteigerung genutzt werden.
+Ziel ist es, eine Möglichkeit zu finden die exponentielle Effizienzsteigerung von ECC-Algorithmen auf medizinische Testungen anzupassen und hierdurch die Kosten deutlich zu reduzieren.
+Hierbei müssen Anpassungen an den Algorithmen vorgenommen werden und neue Herausforderungen beachtet werden.
+
+Beispielsweise sind bei einem 15-11-Hamming-Code nur 11/16 Bits echte Daten.
+Die Paritätsbits kosten hier direkt Speicherkapazität.
+Bei einer PCR-Testung wären theoretisch alle 16 Plätze verwendbar, da die Durchführung von PCR-Tests selbst (anders als bei Speicher) keine Plätze kostet.
+Desweiteren sind neue Probleme zu erwarten, wenn die Tests von Menschen durchgeführt werden.
+Hierbei entstehen Fehler, welche in den bisherigen Algorithmen keine Berücksichtigung finden mussten.
+
+
+\section{Betriebswirtschaftliche Erwägungen}
+In diesem Kapitel sollen betriebswirtschaftliche Aspekte Beachtung finden, insbesondere Skalierung und Logistik.
+Bei der Informatik, sinkt der Paritätsbedarf bei einer erhöhten Datenmenge.
+Hier ist in der Theorie eine endlose Steigerung der Datenmenge effizient, bis zu einem Punkt an dem mehr Bitfehler wahrscheinlich sind als das System berichtigen kann.
+In der Medizin und im betrieblichen Einsatz funktioniert Skalierung grundsätzlich anders.
+Hier bedeutet die Verdopplung der Personenzahl eine massiven Mehraufwand bei Logistik und Organisation.
+Außerdem sind menschliche Fehler wahrscheinlicher und führen bereits bei geringeren Gruppengrößen zu einem wahrscheinlichen Versagen des Systems.
+Es soll auf Basis der Kenntnisse aus dem Algorithmen-Kapitel mehrere Berechnungsmethoden und Skalierungsfaktoren erarbeitet werden.
+
+\section{Simulation}
+Es sollen andere Verfahren aus internationalen Studien herausgearbeitet und neue anhand Methoden aus der Informatik (Codingtheorie) erarbeitet werden. 
+
+Die ermittelten Modelle sollen simuliert werden, um die Skalierung und Auswirkung von Fehlern zu überprüfen.
+Hierdurch sollen optimale Parameter für das Modell anhand der in der Forschungsfrage formulierten Ziele ermittelt werden.
+Ziel ist die Auswirkung von unterschiedlichen Arten und Wahrscheinlichkeiten eines Anwendungsfehlers oder eines fehlerhaften Tests zu ermitteln.
+Dies soll bei der Auswahl eines effizienten Algoritmus unterstützen.
+
+Verglichen werden diese dann auf Effizienz und Robustheit durch eine Simulation.
+Diese ist vorgesehen, indem die Methoden in Software nachgebaut werden und zufällig generierte Testszenarien durchlaufen.
+Hierbei sollen Kombinationen gesucht werden, in denen das Modell ein unerwünschtes Ergebnis liefert.
+Ein Beispiel hierfür wäre die Ausstellung eines falschen Negativzertifikats.
+
+Die Ergebnisse der Simulation sollen als Grundlage genutzt werden, um gegebenenfalls Anpassungen an den Modellen vorzunehmen.
+Hierbei soll ein möglichst effizientes und robustes Modell entstehen und geprüft werden, ob Optimierungspotenzial gegenüber dem bisherigen Verfahren der Blutspendedienste existiert.
+
+\section{Ergebnis}
+Platzhalter
