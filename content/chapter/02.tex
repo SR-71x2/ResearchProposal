@@ -13,10 +13,54 @@ Der Lagebeschreibung folgt eine Zielsetzung, welche die Forschungsfragen und das
 Sie wird sich in großen Teilen am vorliegenden Research Proposal orientieren.
 
 \section{Covid19-Testung}
+\subsection{PCR-Testverfahren}
 Das ersten Hauptkapitel soll die aktuellen Erkenntnisse und Verfahren zur Testung auf eine Covid19-Infektion beschreiben.
 Zentrale Themen werden die Genauigkeit und Fehlerquoten der Tests sein (Sensitivität/Spezifität).
 Der Ablauf und die Logistik von Covid19-Testungen wird beleuchtet.
 
+\subsection{Kanalcodierung}
+Die Integritätsprüfung von Speichern und Signalübertragungen stellt ein großes Forschungsgebiet der Informatik dar.
+Die Kanalcodierung beschäftigt sich hierbei mit der Entwicklung von Algorithmen für die Erkennung und Berichtigung von Fehlern.
+Die Anforderungen sind hierbei stark abhängig vom Anwendungsfall und der zu erwartenden Fehlerverteilung.
+
+Ziel hierbei ist immer, den Overhead durch die Parität gering zu halten und zeitgleich die Integrität der Daten sicherzustellen.
+Einhergehend damit muss eine Abwägung getroffen werden, in welchem Umfang Fehler und Datenverlust akzeptabel sind.
+
+\begin{itemize}
+	\item In der Raumfahrt ist Strahlung eines der Hauptprobleme, welche Bitflips
+	\footnote{Die binäre Änderung eines Speicherfeldes}
+	in Speichern auslösen kann.
+	Hierbei sind oftmals Fehler inakzeptabel, weswegen hochgradig redundante Systeme zum Einsatz kommen.
+	Es werden Teilweise ganze Systeme mehrfach verbaut, um die Ergebnisse zu vergleichen.
+	\item Ethernetpakete haben dieselbe Herausforderung wie die Raumfahrt, dass durch Störungen Bits verloren gehen können.
+	Üblicherwiese sind Ethernetpakete allerdings unkritischer, können erneut gesendet werden und die Strahlungsintensität ist geringer.
+	Deshalb werden hier Fehler nur erkannt, aber auf eine Korrektur verzichtet.
+	Beschädigte Pakete werden verworfen und müssen erneut gesendet werden.
+	\cite{Spec} 
+	\item Anhand der existierenden RAID-Level können die unterschiedlichen Ziele von Kanalcodierung veranschaulicht werden.
+	Zwischen Sicherheit, Verfügbarkeit und Berechnungsintensität muss eine Abwägung getroffen werden.
+	- Ein System kann wie bei RAID-0 zulasten seiner Integrität beschleunigt werden.
+	- Bei RAID-1 wird wie in der Raumfahrt eine volle Redundanz hergestellt. Die hohe Fehlertoleranz der Daten wird hierbei durch hohen Mehraufwand erkauft.
+	- RAID-5 und RAID-6 versuchen die Speicherkosten zu optimieren und eine dem Umstand angemessene Datensicherheit zu erreichen. Hierbei wird ein deutlicher Berechnungsaufwand für die Parität, eine lange Rebuild-Zeit und ein gewisses Ausfallrisiko in Kauf genommen.
+	\item Der Reed-Solomon-Code, welcher Beispielsweise in CDs eingesetzt wird, ist in der Lage Burst-Errors
+	\footnote{Fehler, welche nicht zufällig verteilt sind, sondern in Clustern auftreten.}
+	zu erkennen.
+	Bei CDs kann dies der Fall sein, wenn diese durch einen zusammenhängenden Kratzer beschädigt ist.
+	\item Der Hamming Code war einer der ersten ECC-Algorithmen und wurde in den 1950ern von Richard W. Hamming entwickelt.
+	Seine Verteilung der Paritäts-Bits ermöglicht eine effiziente Überprüfung der Daten.
+	Durch Verwendung von N+1 Paritäts-Bits, kann die Integrität von 2-hoch-N Daten zu überprüfen  werden.
+	Die Berichtigung einzelner Bitfehler ist ebenfalls möglich.
+	Sollte mehr als ein Fehler innerhalb des Blocks auftreten, kann dieser zwar erkannt, aber nicht berichtigt werden.
+	Für einen Speicherbereich mit 256 Bit werden somit 8+1 Paritäts-Bits benötigt, was einem Overhead von nur 3,5 Prozent entspricht.
+	Neuere Algorithmen haben die Effizient weiter gesteigert und sollen im Laufe der Arbeit vergleichen werden.
+\end{itemize}
+
+Ziel dieses Kapitels ist es, ein Verständnis für die Funktionsweise unterschiedlicher Codierungsverfahren zu gewinnen.
+Es sollen Unterschiede und Eigenschaften aufgezeigt werden um zu verdeutlichen, nach welchen Kriterien Codierungsverfahren bewertet werden können.
+Basierend auf diesen Erkenntnissen sollen Rahmenbedingungen definiert werden, welche für eine Covid19-Testung akzeptabel sind.
+Diese sollen im folgenden Kapitel als Rahmenbedingungen für die Optimierung genutzt werden.
+
+\subsection{PCR-Pooling-Verfahren}
 Beleuchtet werden hierbei insbesondere Möglichkeiten, einen Test für mehrere Personen zu verwenden.
 Diese sogenannten Pooling-Verfahren wurden bereits bei anderen Viruserkrankungen erfolgreich eingesetzt.
 \cite{Ärzteblatt}
@@ -39,48 +83,6 @@ Er soll als Basis für den Vergleich anderer Verfahren verwendet werden.
 Der Vergleich dieser Studien und die Beschreibung der Methoden soll ein Schwerpunkt dieses Kapitels werden.
 Auf die Fehleranfälligkeit der Tests unter unterschiedlichen Bedingungen wird ein weiteres Augenmerk gelegt.
 
-\section{Transfer aus der Kanalcodierung}
-Die Integritätsprüfung von Speichern und Signalübertragungen stellt ein großes Forschungsgebiet der Informatik dar.
-Die Kanalcodierung beschäftigt sich hierbei mit der Entwicklung von Algorithmen für die Erkennung und Berichtigung von Fehlern.
-Die Anforderungen sind hierbei stark abhängig vom Anwendungsfall und der zu erwartenden Fehlerverteilung.
-
-Ziel hierbei ist immer, den Overhead durch die Parität gering zu halten und zeitgleich die Integrität der Daten sicherzustellen.
-Einhergehend damit muss eine Abwägung getroffen werden, in welchem Umfang Fehler und Datenverlust akzeptabel sind.
-
-\begin{itemize}
-	\item In der Raumfahrt ist Strahlung eines der Hauptprobleme, welche Bitflips
-		\footnote{Die binäre Änderung eines Speicherfeldes}
-		in Speichern auslösen kann.
-		Hierbei sind oftmals Fehler inakzeptabel, weswegen hochgradig redundante Systeme zum Einsatz kommen.
-		Es werden Teilweise ganze Systeme mehrfach verbaut, um die Ergebnisse zu vergleichen.
-	\item Ethernetpakete haben dieselbe Herausforderung wie die Raumfahrt, dass durch Störungen Bits verloren gehen können.
-		Üblicherwiese sind Ethernetpakete allerdings unkritischer, können erneut gesendet werden und die Strahlungsintensität ist geringer.
-		Deshalb werden hier Fehler nur erkannt, aber auf eine Korrektur verzichtet.
-		Beschädigte Pakete werden verworfen und müssen erneut gesendet werden.
-		\cite{Spec} 
-	\item Anhand der existierenden RAID-Level können die unterschiedlichen Ziele von Kanalcodierung veranschaulicht werden.
-		Zwischen Sicherheit, Verfügbarkeit und Berechnungsintensität muss eine Abwägung getroffen werden.
-		- Ein System kann wie bei RAID-0 zulasten seiner Integrität beschleunigt werden.
-		- Bei RAID-1 wird wie in der Raumfahrt eine volle Redundanz hergestellt. Die hohe Fehlertoleranz der Daten wird hierbei durch hohen Mehraufwand erkauft.
-		- RAID-5 und RAID-6 versuchen die Speicherkosten zu optimieren und eine dem Umstand angemessene Datensicherheit zu erreichen. Hierbei wird ein deutlicher Berechnungsaufwand für die Parität, eine lange Rebuild-Zeit und ein gewisses Ausfallrisiko in Kauf genommen.
-	\item Der Reed-Solomon-Code, welcher Beispielsweise in CDs eingesetzt wird, ist in der Lage Burst-Errors
-		\footnote{Fehler, welche nicht zufällig verteilt sind, sondern in Clustern auftreten.}
-		zu erkennen.
-		Bei CDs kann dies der Fall sein, wenn diese durch einen zusammenhängenden Kratzer beschädigt ist.
-	\item Der Hamming Code war einer der ersten ECC-Algorithmen und wurde in den 1950ern von Richard W. Hamming entwickelt.
-		Seine Verteilung der Paritäts-Bits ermöglicht eine effiziente Überprüfung der Daten.
-		Durch Verwendung von N+1 Paritäts-Bits, kann die Integrität von 2-hoch-N Daten zu überprüfen  werden.
-		Die Berichtigung einzelner Bitfehler ist ebenfalls möglich.
-		Sollte mehr als ein Fehler innerhalb des Blocks auftreten, kann dieser zwar erkannt, aber nicht berichtigt werden.
-		Für einen Speicherbereich mit 256 Bit werden somit 8+1 Paritäts-Bits benötigt, was einem Overhead von nur 3,5 Prozent entspricht.
-		Neuere Algorithmen haben die Effizient weiter gesteigert und sollen im Laufe der Arbeit vergleichen werden.
-\end{itemize}
-
-Ziel dieses Kapitels ist es, ein Verständnis für die Funktionsweise unterschiedlicher Codierungsverfahren zu gewinnen.
-Es sollen Unterschiede und Eigenschaften aufgezeigt werden um zu verdeutlichen, nach welchen Kriterien Codierungsverfahren bewertet werden können.
-Basierend auf diesen Erkenntnissen sollen Rahmenbedingungen definiert werden, welche für eine Covid19-Testung akzeptabel sind.
-Diese sollen im folgenden Kapitel als Rahmenbedingungen für die Optimierung genutzt werden.
-
 \section{Modellerstellung}
 Geprüft werden soll die Übertragbarkeit mehrerer in der Informatik gängigen ECC-Algorithmen auf den medizinischen Bereich.
 Die Theorie wäre, dass Covid-Infektionen bei anlasslosen Testungen wie auch Bitfehler selten sind.
@@ -94,17 +96,7 @@ Bei einer PCR-Testung wären theoretisch alle 16 Plätze verwendbar, da die Durc
 Desweiteren sind neue Probleme zu erwarten, wenn die Tests von Menschen durchgeführt werden.
 Hierbei entstehen Fehler, welche in den bisherigen Algorithmen keine Berücksichtigung finden mussten.
 
-
-\section{Betriebswirtschaftliche Erwägungen / Überarbeitung offen}
-In diesem Kapitel sollen betriebswirtschaftliche Aspekte Beachtung finden, insbesondere Skalierung und Logistik.
-Bei der Informatik, sinkt der Paritätsbedarf bei einer erhöhten Datenmenge.
-Hier ist in der Theorie eine endlose Steigerung der Datenmenge effizient, bis zu einem Punkt an dem mehr Bitfehler wahrscheinlich sind als das System berichtigen kann.
-In der Medizin und im betrieblichen Einsatz funktioniert Skalierung grundsätzlich anders.
-Hier bedeutet die Verdopplung der Personenzahl eine massiven Mehraufwand bei Logistik und Organisation.
-Außerdem sind menschliche Fehler wahrscheinlicher und führen bereits bei geringeren Gruppengrößen zu einem wahrscheinlichen Versagen des Systems.
-Es soll auf Basis der Kenntnisse aus dem Algorithmen-Kapitel mehrere Berechnungsmethoden und Skalierungsfaktoren erarbeitet werden.
-
-\section{Simulation / Überarbeitung offen}
+\subsection{Ergebnisvalidierung / Überarbeitung offen}
 Es sollen andere Verfahren aus internationalen Studien herausgearbeitet und neue anhand Methoden aus der Informatik (Codingtheorie) erarbeitet werden. 
 
 Die ermittelten Modelle sollen simuliert werden, um die Skalierung und Auswirkung von Fehlern zu überprüfen.
@@ -119,6 +111,15 @@ Ein Beispiel hierfür wäre die Ausstellung eines falschen Negativzertifikats.
 
 Die Ergebnisse der Simulation sollen als Grundlage genutzt werden, um gegebenenfalls Anpassungen an den Modellen vorzunehmen.
 Hierbei soll ein möglichst effizientes und robustes Modell entstehen und geprüft werden, ob Optimierungspotenzial gegenüber dem bisherigen Verfahren der Blutspendedienste existiert.
+
+\subsection{Implementierung im Betrieblichen Umfeld / Überarbeitung offen}
+In diesem Kapitel sollen betriebswirtschaftliche Aspekte Beachtung finden, insbesondere Skalierung und Logistik.
+Bei der Informatik, sinkt der Paritätsbedarf bei einer erhöhten Datenmenge.
+Hier ist in der Theorie eine endlose Steigerung der Datenmenge effizient, bis zu einem Punkt an dem mehr Bitfehler wahrscheinlich sind als das System berichtigen kann.
+In der Medizin und im betrieblichen Einsatz funktioniert Skalierung grundsätzlich anders.
+Hier bedeutet die Verdopplung der Personenzahl eine massiven Mehraufwand bei Logistik und Organisation.
+Außerdem sind menschliche Fehler wahrscheinlicher und führen bereits bei geringeren Gruppengrößen zu einem wahrscheinlichen Versagen des Systems.
+Es soll auf Basis der Kenntnisse aus dem Algorithmen-Kapitel mehrere Berechnungsmethoden und Skalierungsfaktoren erarbeitet werden.
 
 \section{Ergebnis}
 Die Arbeit endet mit einem Kapitel, in welchem die Erlebnisse zusammengefasst und Handlungsempfehlungen gegeben werden.
