@@ -1,15 +1,17 @@
 %!TEX root = ../../main.tex
 
-\chapter{Geplanter Aufbau der Arbeit}
+\chapter{Vorgesehener Aufbau der Arbeit}
 \section{Einleitung}
-Die Einleitung der Forschungsarbeit soll mit einer zeitgeschichtlich Einordnung in der Pandemie beginnen.
+Die Einleitung der Forschungsarbeit soll mit einer zeitgeschichtlich Verankerung innerhalb der Pandemie beginnen.
 Diese Einordnung wird als notwendig erachtet, da sich die Situation in der Pandemie laufend verändert.
-Veränderungen - wie das Aufkommen neuer Virusvarianten - sind in der Lage, die Bearbeitung der Forschungsarbeit zu beeinflussen und zur Obsoleszenz ihrer Ergebnisse zu führen.
-Die Lage zum Entstehungszeitpunkt der Arbeit soll deshalb beschrieben werden.
-Eine spätere Einordnung der Arbeit wird hierdurch ermöglicht.
+Die Lage kann sich durch das Aufkommen neuer Virusvarianten, neue Forschungserkenntnisse oder die verfügbarkeit neuer Impfstoffe verändern.
+Die Bearbeitung der Forschungsarbeit wird hierdurch beeinflusst.
+Gravierende Veränderungen können zukünftig zur Obsoleszenz der Ergebnisse führen.
+Die Möglichkeit zur späteren Einordnung der Arbeit ist deshalb wichtig.
+Hierfür muss die Lage zum Entstehungszeitpunkt der Arbeit kurz beschrieben werden.
 
-Der Lagebeschreibung folgt eine Zielsetzung, welche die Forschungsfragen und das Ziel der Arbeit beschreibt.
-Sie wird sich in großen Teilen am vorliegenden Research Proposal orientieren.
+Der Lagebeschreibung folgt eine Zielsetzung, welche die Forschungsfragen beschreibt.
+Diese wird große Ähnlichkeit mit dem vorliegenden Research Proposal aufweisen.
 
 \section{Verfahren zur Covid19-Testung}
 \subsection{Das PCR-Testverfahren}
@@ -17,7 +19,7 @@ Das ersten Hauptkapitel soll die aktuellen Erkenntnisse und Verfahren zur Testun
 Die allgemeine Funktionsweise des PCR-Verfahrens soll hierbei den Einstieg bilden.
 Zentrale Themen werden die Genauigkeit und Fehlerquoten der Tests sein.
 \footnote{Bemessung anhand der verfahrensüblichen Qualiätsmerkmale Sensitivität und Spezifität}
-Der Ablauf und die Logistik von Covid19-Testungen wird hierbei beleuchtet.
+Der Ablauf und die Logistik der Testungen wird hierbei beleuchtet.
 
 Das PCR-Verfahren existierte bereits vor der Covid19-Pandemie.
 Es wird seit den 19XXern
@@ -32,74 +34,91 @@ Forschungsrelevante Aussagen zur Wirksamkeit und Fehlerquote der Testung werden 
 Für betriebswirtschaftliche und ablauforganisatorische Themenbereiche wird die Einbeziehung von praxisnahe Literatur als sinnvoll erachtet.
 
 \subsection{Methoden der Kanalcodierung}
-Die Integritätsprüfung von Speichern und Signalübertragungen stellt ein großes Forschungsgebiet der Informatik dar.
-Die Kanalcodierung beschäftigt sich hierbei mit der Entwicklung von Algorithmen für die Erkennung und Berichtigung von Fehlern.
+Ein Forschungsgebiet der Informatik ist die Integritätsprüfung von Speichern und Signalübertragungen.
+Die Forscher entwickeln Algorithmen, für die Erkennung und Berichtigung von Fehlern.
 Die Anforderungen sind hierbei stark abhängig vom Anwendungsfall und der zu erwartenden Fehlerverteilung.
+Ziel ist es, den Overhead gering zu halten und zeitgleich die Integrität der Daten sicherzustellen.
+Es muss eine Abwägung getroffen werden, in welchem Umfang Fehler und Datenverlust akzeptabel sind.
 
-Ziel hierbei ist immer, den Overhead durch die Parität gering zu halten und zeitgleich die Integrität der Daten sicherzustellen.
-Einhergehend damit muss eine Abwägung getroffen werden, in welchem Umfang Fehler und Datenverlust akzeptabel sind.
-
-Ziel dieses Kapitels ist es, ein Verständnis für die Funktionsweise unterschiedlicher Codierungsverfahren zu gewinnen.
-Es sollen anhand von Beispielen die Unterschiede und Eigenschaften verschiedener Verfahren aufgezeigt werden.
+Dieses Kapitel dient dazu, ein Verständnis für die Funktionsweise unterschiedlicher Codierungsverfahren zu vermitteln.
+Anhand von Beispielen werden die Unterschiede und Eigenschaften verschiedener Verfahren aufgezeigt.
 Verdeutlicht wird hierdurch, nach welchen Kriterien Codierungsverfahren bewertet und verglichen werden können.
-
-Im Zusammenhang dieser Arbeit, sollen aus der Kanalcodierung Anforderungen, Konzepte und Terminologie übernommen werden.
-Basierend auf diesen Erkenntnissen sollen Rahmenbedingungen definiert werden, welche für eine Covid19-Testung akzeptabel sind.
-Diese sollen im folgenden Kapitel als Rahmenbedingungen für die Optimierung genutzt werden.
-
-Eine direkte Verwendung bekannter Fehlerkorrektur-Algorithmen in der Medizintechnik wird an dieser Stelle geprüft.
-Die Möglichkeit einer direkten Implementierung ist allerdings aufgrund sehr unterschiedlicher Abläufe unwahrscheinlich.
-Hier soll in der Arbeit eine Abgrenzung erfolgen.
+Aus der Kanalcodierung werden Anforderungen, Konzepte und Terminologie übernommen.
+Für eine Covid19-Testung werden so Rahmenbedingungen definiert, welche im folgenden Kapitel für die Optimierung genutzt werden.
+Die Funktionsprinzipien der Codierungsverfahren unterscheiden sich stark von der Medizintechnik.
+Eine direkte Implementierung ist deshalb voraussichtlich nicht möglich, was in der Arbeit geprüft und abgegrenzt wird.
 
 \subsection{PCR-Pooling-Verfahren}
-Basierend auf den Erkenntnissen über das PCR-verfahren und die Methodiken der Kanalcodierung, soll in diesem Kapitel der Transfer erfolgen und Verfahren betrachtet werden, einen Test für mehrere Personen zu verwenden.
-Diese sogenannten Pooling-Verfahren wurden bereits bei anderen Viruserkrankungen erfolgreich eingesetzt.
+Dieses Kapitel kombiniert die gewonnenen Erkenntnissen über das PCR-Verfahren mit den Methodiken der Kanalcodierung.
+Sogenannten Pooling-Verfahren wurden bereits bei anderen Viruserkrankungen erfolgreich eingesetzt.
 \footcite{Ärzteblatt}
+Hierbei werden die Proben mehrerer Patienten vermischt, um durch einen gemeinsamen Test den Aufwand zu senken.
 Im Laufe der Pandemie wurden von vielen Forschungsgruppen und Laboren Methoden entwickelt, um PCR-Pooling durchzuführen.
 \footcite{Reddit Quelle}
-Die Skalierungen sind hier sehr unterschiedlich.
+Zur Robustheit des PCR-Verfahren gegen Verwässerung der Proben und den Skalierungsmöglichkeiten gibt es widersprüchliche Aussagen.
 \footcite{Alternative Quelle Pooling}
-Zur Robustheit des PCR-Verfahren gegen Verwässerung der Proben gibt es widersprüchliche Aussagen.
 Einige behaupten man könne maximal 5 Personen gemeinsam testen.
 \footcite{Quelle}
-Andere testen 25-40 Personen gemeinsam.
+Andere vermischen die Proben von 25-40 Patienten.
 \footcite{Quelle}
-In Deutschland haben lt. dem Ärzteblatt die Blutspendedienste am meisten Erfahrung mit PCR-Pooling-Verfahren.
+Das Ärzteblatt bescheinigt den Blutspendediensten die meiste Erfahrung mit PCR-Pooling-Verfahren.
 \footcite{Ärzteblatt}
-Seit Jahrzehnten kommen hier Pooling-Verfahren zum Einsatz, um Blutspenden auf HIV und Hepatitis zu testen.
-Die Blutspendedienste haben hierfür auch ein Patent angemeldet.
+Um Blutspenden auf HIV und Hepatitis zu testen, kommen hier seit Jahrzehnten Pooling-Verfahren zum Einsatz.
+Die Blutspendedienste haben für diese Methode ein Patent
 \footcite{Patent Blutspende}
-Die Methode dieses Patents soll als Basis für den Vergleich anderer Verfahren verwendet werden.
+angemeldet, welches mit den Erkenntnissen anderer Forschergruppen verglichen werden soll.
 
 Der Vergleich dieser Studien und die Beschreibung der Methoden soll ein Schwerpunkt dieses Kapitels werden.
-Auf die Fehleranfälligkeit der Tests unter unterschiedlichen Bedingungen wird ein weiteres Augenmerk gelegt.
+Ein Fokus ist hierbei die Fehleranfälligkeit der Tests bei unterschiedlichen Bedingungen und Verfahren.
 
-Unterlegt werden diese Beschreibungen durch wissenschaftliche Artikel, welche allerdings aufgrund der Tagesaktualität teilweise von Pre-Print-Servern stammen werden und noch keinen Peer-Review erfahren haben.
-Um den wissenschafltichen Anspruch einzuhalten, müssen diese Quellen besonders kritisch refelektiert und mit anderen Publikationen verglichen werden.
+Die wissenschaftliche Artikel, welche den Verfahren zugrunde liegen, werden aufgrund der Tagesaktualität teilweise von Pre-Print-Servern stammen.
+In diesen Fällen ist noch keinen Peer-Review erfolgt, weswegen diese Quellen besonders kritisch reflektiert und mit anderen Publikationen verglichen werden müssen.
+Die Einhaltung des wissenschaftlichen Anspruchs wird durch den Vergleich der vielen Publikationen und auf Basis der zugrundeliegenden Literatur sichergestellt.
 
+\section{Validierung und Implementierung}
 \subsection{Validierung der Modelle}
 Im vorherigen Kapitel wurden anhand von internationalen Studien Verfahren für das PCR-Pooling erarbeitet.
-Die ermittelten Modelle sollen in diesem Kapitel durch Methoden aus der Informatik validiert werden.
+Die ermittelten Modelle sollen in diesem Kapitel durch Forschungsmethoden der Wirtschaftsinformatik validiert werden.
 
 Ziel ist es, eine geeignete Methode und Skalierung zu finden und diese auf Robustheit gegen Fehlern zu überprüfen.
 In der Medizin sowie im betrieblichen Umfeld, funktioniert Skalierung grundsätzlich anders als in der Informatik.
 Hier bedeutet die Verdopplung der Personenzahl eine massiven Mehraufwand bei Logistik und Organisation.
 In diesem Kapitel sollen für das Modell optimale Parameter gefunden werden, um die in der Forschungsfrage formulierten Ziele zu erfüllen.
-Dies soll die Grundlage der Auswahl eines effizienten Algorithmus für die Implementierung sein.
+Dies soll die Grundlage für die Auswahl eines effizienten Algorithmus sein, welcher im nächsten Kapitel implementiert wird.
 
-Als Forschungsmethoden die Validierung sind eine Simulation oder argumentativ-deduktiven Analyse vorgesehen.
-Hierbei sollen Szenarien gefunden werden, in denen das Modell ein unerwünschtes Ergebnis liefert.
-Auf Grundlage der Validierung werden gegebenenfalls Anpassungen an den Modellen vorgenommen.
-Hierbei soll ein möglichst effizientes und robustes Modell entstehen und geprüft werden, ob Optimierungspotenzial gegenüber dem bisherigen Verfahren der Blutspendedienste existiert.
+Als Forschungsmethoden für die Validierung sind eine Simulation oder eine argumentativ-deduktiven Analyse vorgesehen.
+Hierbei sollen die Grenzen der beschriebenen Verfahren erforscht werden.
+Grenzwerte für das Auftreten unerwünschter Ergebnisse werden anhand den Methoden der Informatik definiert.
+Hierbei soll aus den beschriebenen Verfahren ein möglichst effizientes und robustes Modell ausgewählt werden.
 
-\section{Implementierung im betrieblichen Umfeld}
+Die Ergebnisse der Validierung werden gegebenenfalls als Anpassungen in die Modellen eingearbeitet.
+Ziel ist es zu erforschen, ob ein Optimierungspotenzial gegenüber dem bisherigen Verfahren der Blutspendedienste existiert.
+
+\subsection{Implementierung im betrieblichen Umfeld}
 In diesem Kapitel soll eine Referenzimplementierung der erarbeiteten Modelle in das betriebliche Umfeld erstellt werden.
-Menschliche Fehler können zu einem Versagen des Systems führen und sind durch betriebliche Abläufe zu minimieren.
 
-Praktische Erwägungen wie Logistik und Kosten der Testung werden beschrieben.
+Um die ermittelte Effizienzsteigerung in der Praxis zu erreichen, müssen die Abläufe fehlerfrei ausgeführt werden.
+Bei mangelhafter Umsetzung, könnten die Fehlerrate der Testverfahren steigen oder Proben kontaminiert werden.
+Das Ergebnis wären ein Mehraufwand durch erneute Testung oder unentdeckte Fehldiagnosen.
+Eine Aufgabe der Implementierung ist es, solche Risiken für operative Fehler minimieren.
+
+Erreicht werden kann dies durch betriebliche Abläufe, Dokumentation und die Reduzierung der Arbeitsschritte.
+Hierfür sollen praktische Empfehlungen gegeben werden.
+Zudem wird die Logistik und entstehende Kosten der Testung beschrieben.
+
+Dieses Kapitel wird sich auf einige Standardliteratur aus den Bereichen Prozess- und Ablauforganisation stützen.
+Im Schwerpunkt handelt es sich hierbei allerdings um ein induktives Kapitel mit dem Ziel, einen Ausblick auf mögliche Implementierungsstrategien zu geben.
+Eine abschließende Behandlung der betrieblichen Abläufe wird im Rahmen der Forschungsarbeit nicht möglich sein.
+Aufgrund der Individualität jedes Unternehmens werden hier eher allgemeingültige Empfehlungen gegeben.
 
 \section{Ergebnis}
 Die Arbeit endet mit einem Kapitel, in welchem die Erlebnisse zusammengefasst und Handlungsempfehlungen gegeben werden.
 Es wird geprüft ob das Forschungsziel erreicht wurde und wie hoch das Optimierungspotenzial gegenüber den bisherigen Verfahren ist.
 Auf dieser Basis wird ein Ausblick auf die Potenziale der betrieblichen Umsetzung gegeben.
+
+Abhängig vom endgültigen Schwerpunkt der Arbeit, könnte die Implementierung der Verfahren ein Unterkapitel "Ausblick" im Rahmen des Ergebnisses werden.
+Die Details der Implementierung würden hierdurch aus der Arbeit ausgelagert und abgegrenzt werden.
+Sinnvoll könnte dies sein, wenn die primäre Forschungsfrage aufgrund von vielen unterschiedlichen Verfahren einen größeren Anteil der verfügbaren Seitenzahl beansprucht.
+Die sekundäre Forschungsfrage wird somit flexibel angepasst, um ausreichend Ressourcen für die primäre Forschungsfrage bereitzustellen.
+
 
