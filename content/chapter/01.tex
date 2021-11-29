@@ -2,34 +2,35 @@
 
 \chapter{Problemstellung und Forschungsziel}
 Der Testung der Bevölkerung ist eine der wichtigsten Maßnahmen zur Pandemiebekämpfung.
-Die Sensitivität\footnote{Quote der Infizierten, welche durch den Test korrekt identifiziert werden.}
-der Schnelltests ist allerdings nach den bisherigen Erkenntnissen nicht ausreichend.\footcite{WuerzburgStudie}
-Zielführend wäre deshalb, einen größtmöglichen Bevölkerungsanteil regelmäßig mittels des PCR-Verfahrens\footnote{\acf{Polymerase chain reaction}}
- zu testen.
+Zielführend wäre deshalb, hierbei die ungenauen Antigen-Schnelltests\footcite{WuerzburgStudie}
+durch das präziseren PCR-Verfahren\footnote{Polymerase Chain Reaction}
+zu ersetzen.
 Aktuell ist dies aufgrund der hierfür erforderlichen Laborkapazitäten und hohen Kosten nicht umsetzbar.\footnote{Q: Überlastung PCR}
 
-Die vorgesehene Arbeit hat zum Ziel, Methoden zu erforschen um die vorhandene PCR-Testkapazitäten effizienter zu nutzen.
-Erreicht werden soll dies, durch die Anwendung von Pooling-Verfahren.
-Hierbei werden die Proben mehrerer Patienten kombiniert und gemeinsam getestet.
-Die Kapazitäten für PCR-Tests sollen hierdurch gesteigert werden, um diese anstelle von Schnelltests einsetzen zu können.
-Ziel ist, hierdurch eine Qualitätssteigerung bei der anlasslosen Massentestung zu erreichen.
+Die vorgesehene Arbeit hat zum Ziel, existierende Pooling-Verfahren zu überprüfen.
+Die Proben mehrerer Patienten werden hierbei kombiniert und gemeinsam getestet.
+Diese Verfahren bieten erhebliche Steigerungspotenziale für die Kapazitäten der PCR-Testungen.\footcite{Aertzeblatt}
+Bei der anlasslosen Massentestung könnte hierdurch eine Qualitätssteigerung erreicht werden.
 
-Ziel der Arbeit ist, ein Testverfahren nach den folgenden Anforderungen zu identifizieren:
+Idendifiziert werden soll ein Pooling-Verfahren, welches diese Steigerung ohne signifikanten Qualitätsverlust ermöglicht.
+Ziel der Arbeit ist deshalb, Pooling-Methode nach den folgenden Anforderungen zu prüfen:
 \begin{itemize}
 \setlength{\itemsep}{-8pt}
-\item Signifikante Steigerung der Testkapazitäten
-\item Senkung der Testkosten pro Patient
+\item Potenzial zur Erhöhung der Testkapazitäten
 \item Robustheit gegen Fehlanwendung
-\item Geringes Risiko von falsch-positiven Ergebnissen
+\item Risiko von falschen Ergebnissen
 \item Anwendbarkeit im betrieblichen Umfeld
 \end{itemize}
 
-Während der Pandemie haben sich viele Forschergruppen an Pooling-Verfahren gearbeitet.
-Hierbei sind viele unterschiedliche Ansätze entstanden.
-Die vorliegende Arbeit möchte diese Methoden zunächst analysieren und zu Clustern ähnlicher Methoden aggregieren.
+Während der Pandemie haben sich viele Forschergruppen an Pooling-Verfahren gearbeitet.\footcite{Aertzeblatt}
+Hierbei sind viele unterschiedliche Ansätze entstanden.\footcite{Preprint-Pooling}
+Die vorliegende Arbeit möchte diese Methoden zunächst analysieren und zu Clustern ähnlicher Verfahren aggregieren.
 Anschließend soll  eine Überprüfung auf Effizienz und Robustheit der unterschiedlichen Verfahren stattfinden.
-Hierfür sollen Forschungsmethoden aus der Wirtschaftsinformatik eingesetzt werden.
-Eine Simulation ist vorgesehen oder eine argumentativ-deduktive Analyse.
+Hierfür sollen eine Simulation oder eine argumentativ-deduktive Analyse eingesetzt werden.
 
-Primäres Forschungsziel ist die Identifizierung eines effizienten und robusten Testverfahrens.
-Sekundäres Forschungsziel ist die Erarbeitung einer Referenzimplementierung für das betriebliche Umfeld.
+\textbf{Primäres Forschungsziel}\newline
+ Analyse existierender Testverfahrens zu PCR-Pooling-Verfahren.\newline
+ Überprüfung dieser Methoden auf Effizienz und Robustheit.
+ 
+ \textbf{Sekundäres Forschungsziel}\newline 
+ Die Erarbeitung einer Referenzimplementierung für das betriebliche Umfeld.\newline
