@@ -1,18 +1,6 @@
 %!TEX root = ../../main.tex
 
-\chapter{Vorgesehener Aufbau der Arbeit}
-\section{Einleitung}
-Die Einleitung der Forschungsarbeit soll mit einer zeitgeschichtlich Verankerung innerhalb der Pandemie beginnen.
-Diese Einordnung wird als notwendig erachtet, da sich die Situation in der Pandemie laufend verändert.
-Die Lage kann sich durch das Aufkommen neuer Virusvarianten, neue Forschungserkenntnisse oder die verfügbarkeit neuer Impfstoffe verändern.
-Die Bearbeitung der Forschungsarbeit wird hierdurch beeinflusst.
-Gravierende Veränderungen können zukünftig zur Obsoleszenz der Ergebnisse führen.
-Die Möglichkeit zur späteren Einordnung der Arbeit ist deshalb wichtig.
-Hierfür muss die Lage zum Entstehungszeitpunkt der Arbeit kurz beschrieben werden.
-
-Der Lagebeschreibung folgt eine Zielsetzung, welche die Forschungsfragen beschreibt.
-Diese wird große Ähnlichkeit mit dem vorliegenden Research Proposal aufweisen.
-
+\chapter{Aktueller Stand der Wissenschaft}
 \section{Verfahren zur Covid19-Testung}
 \subsection{Das PCR-Testverfahren}
 Das ersten Hauptkapitel soll die aktuellen Erkenntnisse und Verfahren zur Testung auf eine Covid19-Infektion beschreiben.
@@ -51,7 +39,7 @@ Eine direkte Implementierung ist deshalb voraussichtlich nicht möglich, was in 
 \subsection{PCR-Pooling-Verfahren}
 Dieses Kapitel kombiniert die gewonnenen Erkenntnissen über das PCR-Verfahren mit den Methodiken der Kanalcodierung.
 Sogenannten Pooling-Verfahren wurden bereits bei anderen Viruserkrankungen erfolgreich eingesetzt.
-\footcite{schlenger_pooling_2020}
+\footcite{Aertzeblatt}
 Hierbei werden die Proben mehrerer Patienten vermischt, um durch einen gemeinsamen Test den Aufwand zu senken.
 Im Laufe der Pandemie wurden von vielen Forschungsgruppen und Laboren Methoden entwickelt, um PCR-Pooling durchzuführen.
 \footcite{Reddit Quelle}
@@ -62,7 +50,7 @@ Einige behaupten man könne maximal 5 Personen gemeinsam testen.
 Andere vermischen die Proben von 25-40 Patienten.
 \footcite{Quelle}
 Das Ärzteblatt bescheinigt den Blutspendediensten die meiste Erfahrung mit PCR-Pooling-Verfahren.
-\footcite{schlenger_pooling_2020}
+\footcite{Aertzeblatt}
 Um Blutspenden auf HIV und Hepatitis zu testen, kommen hier seit Jahrzehnten Pooling-Verfahren zum Einsatz.
 Die Blutspendedienste haben für diese Methode ein Patent
 \footcite{Patent Blutspende}
@@ -74,51 +62,3 @@ Ein Fokus ist hierbei die Fehleranfälligkeit der Tests bei unterschiedlichen Be
 Die wissenschaftliche Artikel, welche den Verfahren zugrunde liegen, werden aufgrund der Tagesaktualität teilweise von Pre-Print-Servern stammen.
 In diesen Fällen ist noch keinen Peer-Review erfolgt, weswegen diese Quellen besonders kritisch reflektiert und mit anderen Publikationen verglichen werden müssen.
 Die Einhaltung des wissenschaftlichen Anspruchs wird durch den Vergleich der vielen Publikationen und auf Basis der zugrundeliegenden Literatur sichergestellt.
-
-\section{Validierung und Implementierung}
-\subsection{Validierung der Modelle}
-Im vorherigen Kapitel wurden anhand von internationalen Studien Verfahren für das PCR-Pooling erarbeitet.
-Die ermittelten Modelle sollen in diesem Kapitel durch Forschungsmethoden der Wirtschaftsinformatik validiert werden.
-
-Ziel ist es, eine geeignete Methode und Skalierung zu finden und diese auf Robustheit gegen Fehlern zu überprüfen.
-In der Medizin sowie im betrieblichen Umfeld, funktioniert Skalierung grundsätzlich anders als in der Informatik.
-Hier bedeutet die Verdopplung der Personenzahl eine massiven Mehraufwand bei Logistik und Organisation.
-In diesem Kapitel sollen für das Modell optimale Parameter gefunden werden, um die in der Forschungsfrage formulierten Ziele zu erfüllen.
-Dies soll die Grundlage für die Auswahl eines effizienten Algorithmus sein, welcher im nächsten Kapitel implementiert wird.
-
-Als Forschungsmethoden für die Validierung sind eine Simulation oder eine argumentativ-deduktiven Analyse vorgesehen.
-Hierbei sollen die Grenzen der beschriebenen Verfahren erforscht werden.
-Grenzwerte für das Auftreten unerwünschter Ergebnisse werden anhand den Methoden der Informatik definiert.
-Hierbei soll aus den beschriebenen Verfahren ein möglichst effizientes und robustes Modell ausgewählt werden.
-
-Die Ergebnisse der Validierung werden gegebenenfalls als Anpassungen in die Modellen eingearbeitet.
-Ziel ist es zu erforschen, ob ein Optimierungspotenzial gegenüber dem bisherigen Verfahren der Blutspendedienste existiert.
-
-\subsection{Implementierung im betrieblichen Umfeld}
-In diesem Kapitel soll eine Referenzimplementierung der erarbeiteten Modelle in das betriebliche Umfeld erstellt werden.
-
-Um die ermittelte Effizienzsteigerung in der Praxis zu erreichen, müssen die Abläufe fehlerfrei ausgeführt werden.
-Bei mangelhafter Umsetzung, könnten die Fehlerrate der Testverfahren steigen oder Proben kontaminiert werden.
-Das Ergebnis wären ein Mehraufwand durch erneute Testung oder unentdeckte Fehldiagnosen.
-Eine Aufgabe der Implementierung ist es, solche Risiken für operative Fehler minimieren.
-
-Erreicht werden kann dies durch betriebliche Abläufe, Dokumentation und die Reduzierung der Arbeitsschritte.
-Hierfür sollen praktische Empfehlungen gegeben werden.
-Zudem wird die Logistik und entstehende Kosten der Testung beschrieben.
-
-Dieses Kapitel wird sich auf einige Standardliteratur aus den Bereichen Prozess- und Ablauforganisation stützen.
-Im Schwerpunkt handelt es sich hierbei allerdings um ein induktives Kapitel mit dem Ziel, einen Ausblick auf mögliche Implementierungsstrategien zu geben.
-Eine abschließende Behandlung der betrieblichen Abläufe wird im Rahmen der Forschungsarbeit nicht möglich sein.
-Aufgrund der Individualität jedes Unternehmens werden hier eher allgemeingültige Empfehlungen gegeben.
-
-\section{Ergebnis}
-Die Arbeit endet mit einem Kapitel, in welchem die Erlebnisse zusammengefasst und Handlungsempfehlungen gegeben werden.
-Es wird geprüft ob das Forschungsziel erreicht wurde und wie hoch das Optimierungspotenzial gegenüber den bisherigen Verfahren ist.
-Auf dieser Basis wird ein Ausblick auf die Potenziale der betrieblichen Umsetzung gegeben.
-
-Abhängig vom endgültigen Schwerpunkt der Arbeit, könnte die Implementierung der Verfahren ein Unterkapitel "Ausblick" im Rahmen des Ergebnisses werden.
-Die Details der Implementierung würden hierdurch aus der Arbeit ausgelagert und abgegrenzt werden.
-Sinnvoll könnte dies sein, wenn die primäre Forschungsfrage aufgrund von vielen unterschiedlichen Verfahren einen größeren Anteil der verfügbaren Seitenzahl beansprucht.
-Die sekundäre Forschungsfrage wird somit flexibel angepasst, um ausreichend Ressourcen für die primäre Forschungsfrage bereitzustellen.
-
-
