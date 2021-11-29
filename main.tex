@@ -9,10 +9,34 @@
 %%**************************************************************
 
 \input{ads/header}
-\input{content/glossary}
+%\input{content/glossary}
 
-\usepackage[backend=biber]{biblatex}
+% Von Kevin
+ \usepackage[
+ backend=biber,
+ style=apa,
+ %citestyle=authoryear,
+ bibstyle=apa,
+ %hyperref=true,
+ %giveninits=true,
+ %uniquename=false,
+ %sorting=nyt,
+ %sortcites=true,
+ %doi=true
+ %isbn=false,
+ %eprint=false,
+ %date=year,
+ %labeldate=year,
+ %block=space,
+ %bibencoding=auto,
+ %maxcitenames=2,
+ %mincitenames=1
+]{biblatex}
+
+% Heidenheim
+%\usepackage[backend=biber]{biblatex}
 \addbibresource{bibliographie.bib}
+
 
 
 \begin{document}
@@ -93,7 +117,12 @@
 
 	% Bibilography
 	\cleardoublepage
-	\printbibliography
+	%\printbibliography
+
+	% Von Kevin
+	\begin{sloppypar} % sloppypar for better url placement
+		\printbibliography[heading=bibintoc]{}
+	\end{sloppypar}
 
 	\newpage
 	\input{ads/declaration}

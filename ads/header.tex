@@ -106,7 +106,7 @@
 \usepackage[nonumberlist,toc]{glossaries}
 
 % Generate glossary
-\makeglossaries{}
+% \makeglossaries{}
 
 % Load colors
 \defineColors{}
@@ -133,26 +133,26 @@
 \addtokomafont{caption}{\small}
 
 % Bibliographie settings
-\iflang{de}{%
-\usepackage[
-	backend=biber,		% recommended. Alternative: bibtex
-	bibwarn=true,
-	bibencoding=utf8,	         % If .bib file is encoded with utf8, otherwise ascii
-	sortlocale=de_DE,
-	style=\quoteStyle,
-]{biblatex}
-}
-\iflang{en}{%
-\usepackage[
-	backend=biber,		% recommended. Alternative: bibtex
-	bibwarn=true,
-	bibencoding=utf8,        % If .bib file is encoded with utf8, otherwise ascii
-	sortlocale=en_US,
-	style=\quoteStyle,
-]{biblatex}
-}
+% \iflang{de}{%
+%\usepackage[
+%	backend=biber,		% recommended. Alternative: bibtex
+%	bibwarn=true,
+%	bibencoding=utf8,	         % If .bib file is encoded with utf8, otherwise ascii
+%	sortlocale=de_DE,
+%	style=\quoteStyle,
+%]{biblatex}
+%}
+%\iflang{en}{%
+%\usepackage[
+%	backend=biber,		% recommended. Alternative: bibtex
+%	bibwarn=true,
+%	bibencoding=utf8,        % If .bib file is encoded with utf8, otherwise ascii
+%	sortlocale=en_US,
+%	style=\quoteStyle,
+%]{biblatex}
+%}
 
-\addbibresource{bibliographie.bib}
+%\addbibresource{bibliographie.bib}
 
 % Hurenkinder und Schusterjungen verhindern
 % http://projekte.dante.de/DanteFAQ/Silbentrennung
