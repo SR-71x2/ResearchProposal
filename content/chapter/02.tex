@@ -2,35 +2,31 @@
 
 \chapter{Aktueller Stand der Wissenschaft}
 \section{Das PCR-Testverfahren}
-Das ersten Hauptkapitel soll die aktuellen Erkenntnisse und Verfahren zur Testung auf eine Covid19-Infektion beschreiben.
-Die allgemeine Funktionsweise des PCR-Verfahrens soll hierbei den Einstieg bilden.
+Um die Grundlagen für spätere Kapitel zu bilden, soll zunächst die allgemeine Funktionsweise des PCR-Verfahrens erläutert werden.
 Zentrale Themen werden die Genauigkeit und Fehlerquoten der Tests sein.
-\footnote{Bemessung anhand der verfahrensüblichen Qualiätsmerkmale Sensitivität und Spezifität}
-Der Ablauf und die Logistik der Testungen wird hierbei beleuchtet.
+Die verfahrensüblichen Qualiätsmerkmale Sensitivität und Spezifität werden erläutert und Ablauf sowie Logistik der Testungen eingegangen.
 
 Das PCR-Verfahren existierte bereits vor der Covid19-Pandemie.
-Es wird seit den 19XXern
-\footcite{Quelle erster Masseneinsatz PCR}
+Es wird seit 1983
+\footcite{wink_pcr_1994,S. 5}
 zur Erkennung von Viruserkrankungen eingesetzt.
-Sowohl wissenschaftliche Literatur
-\footcite{Wissenschaftlich PCR}
-als auch praxisnahe Publikationen
-\footcite{Praxishandbuch PCR}
-sind verfügbar.
+Sowohl wissenschaftliche Literatur als auch praxisnahe Publikationen sind verfügbar.
+\footcite{clewley_polymerase_1995}
+\footcite{wehrle_weber_pcr_1994}
 Forschungsrelevante Aussagen zur Wirksamkeit und Fehlerquote der Testung werden hierbei ausschließlich auf Quellen gestützt, welche wissenschaftliche Qualitätsstandards erfüllen.
 Für betriebswirtschaftliche und ablauforganisatorische Themenbereiche wird die Einbeziehung von praxisnahe Literatur als sinnvoll erachtet.
 
 \section{Methoden der Kanalcodierung}
 Ein Forschungsgebiet der Informatik ist die Integritätsprüfung von Speichern und Signalübertragungen.
-Die Forscher entwickeln Algorithmen, für die Erkennung und Berichtigung von Fehlern.
+Die Forscher entwickeln Algorithmen, für die Erkennung und Berichtigung von Fehlern.\footcite{hamming_information_1987}
 Die Anforderungen sind hierbei stark abhängig vom Anwendungsfall und der zu erwartenden Fehlerverteilung.
-Ziel ist es, den Overhead gering zu halten und zeitgleich die Integrität der Daten sicherzustellen.
+Ziel ist es, den Overhead gering zu halten und zeitgleich die Integrität der Daten sicherzustellen.\footcite{blahut_algebraic_1992}
 Es muss eine Abwägung getroffen werden, in welchem Umfang Fehler und Datenverlust akzeptabel sind.
 
 Dieses Kapitel dient dazu, ein Verständnis für die Funktionsweise unterschiedlicher Codierungsverfahren zu vermitteln.
 Anhand von Beispielen werden die Unterschiede und Eigenschaften verschiedener Verfahren aufgezeigt.
 Verdeutlicht wird hierdurch, nach welchen Kriterien Codierungsverfahren bewertet und verglichen werden können.
-Aus der Kanalcodierung werden Anforderungen, Konzepte und Terminologie übernommen.
+Aus der Kanalcodierung werden Anforderungen, Konzepte und Terminologie übernommen.\footcite{dankmeier_codierung_1994}
 Für eine Covid19-Testung werden so Rahmenbedingungen definiert, welche im folgenden Kapitel für die Optimierung genutzt werden.
 Die Funktionsprinzipien der Codierungsverfahren unterscheiden sich stark von der Medizintechnik.
 Eine direkte Implementierung ist deshalb voraussichtlich nicht möglich, was in der Arbeit geprüft und abgegrenzt wird.
@@ -41,18 +37,18 @@ Sogenannten Pooling-Verfahren wurden bereits bei anderen Viruserkrankungen erfol
 \footcite{Aertzeblatt}
 Hierbei werden die Proben mehrerer Patienten vermischt, um durch einen gemeinsamen Test den Aufwand zu senken.
 Im Laufe der Pandemie wurden von vielen Forschungsgruppen und Laboren Methoden entwickelt, um PCR-Pooling durchzuführen.
-\footcite{Reddit Quelle}
+\footcite{calabrese_how_2021}
 Zur Robustheit des PCR-Verfahren gegen Verwässerung der Proben und den Skalierungsmöglichkeiten gibt es widersprüchliche Aussagen.
 \footcite{Alternative Quelle Pooling}
 Einige behaupten man könne maximal 5 Personen gemeinsam testen.
-\footcite{Quelle}
+\footcite{schmidt_novel_2020}
 Andere vermischen die Proben von 25-40 Patienten.
-\footcite{Quelle}
+\footcite{verwilt_evaluation_2021}
 Das Ärzteblatt bescheinigt den Blutspendediensten die meiste Erfahrung mit PCR-Pooling-Verfahren.
 \footcite{Aertzeblatt}
 Um Blutspenden auf HIV und Hepatitis zu testen, kommen hier seit Jahrzehnten Pooling-Verfahren zum Einsatz.
 Die Blutspendedienste haben für diese Methode ein Patent
-\footcite{Patent Blutspende}
+\footcite{roth_verfahren_2007}
 angemeldet, welches mit den Erkenntnissen anderer Forschergruppen verglichen werden soll.
 
 Der Vergleich dieser Studien und die Beschreibung der Methoden soll ein Schwerpunkt dieses Kapitels werden.
