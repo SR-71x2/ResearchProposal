@@ -5,28 +5,36 @@
 Im vorherigen Kapitel wurden anhand von internationalen Studien Verfahren für das PCR-Pooling erarbeitet.
 Die ermittelten Modelle sollen in diesem Kapitel durch Forschungsmethoden der Wirtschaftsinformatik validiert werden.
 
+Bei mangelhafter Umsetzung einer Pooling-Methode, könnten die Fehlerrate der Testverfahren steigen oder Proben kontaminiert werden.
+Das Ergebnis wären ein Mehraufwand durch erneute Testung oder unentdeckte Fehldiagnosen.
 Ziel ist es, eine geeignete Methode und Skalierung zu finden und diese auf Robustheit gegen Fehlern zu überprüfen.
-In der Medizin sowie im betrieblichen Umfeld, funktioniert Skalierung grundsätzlich anders als in der Informatik.
-Hier bedeutet die Verdopplung der Personenzahl eine massiven Mehraufwand bei Logistik und Organisation.
-In diesem Kapitel sollen für das Modell optimale Parameter gefunden werden, um die in der Forschungsfrage formulierten Ziele zu erfüllen.
-Dies soll die Grundlage für die Auswahl eines effizienten Algorithmus sein, welcher im nächsten Kapitel implementiert wird.
-
 Als Forschungsmethoden für die Validierung sind eine Simulation oder eine argumentativ-deduktiven Analyse vorgesehen.
 Hierbei sollen die Grenzen der beschriebenen Verfahren erforscht werden.
-Grenzwerte für das Auftreten unerwünschter Ergebnisse werden anhand den Methoden der Informatik definiert.
-Hierbei soll aus den beschriebenen Verfahren ein möglichst effizientes und robustes Modell ausgewählt werden.
+
+Getestet werden sollen beispielsweise:
+\begin{itemize}
+	\setlength{\itemsep}{-8pt}
+	\item Unterschiedliche Infektionswahrscheinlichkeiten in der Testgruppe
+	\item Clusterbildung von Positivfällen
+	\item Falschergebnis einzelner (Teil-)Testungen
+	\item Kontaminierung der Proben
+	\item Fehler bei der Probenvermischung
+\end{itemize}
+
+Aus den Pooling-Verfahren des vorherigen Kapitels soll so ein möglichst effizientes und robustes Modell gewählt werden.
+Es sollen optimale Parameter für das Modell gefunden werden, um die in der Forschungsfrage formulierten Ziele zu erfüllen.
 
 Die Ergebnisse der Validierung werden gegebenenfalls als Anpassungen in die Modellen eingearbeitet.
-Ziel ist es zu erforschen, ob ein Optimierungspotenzial gegenüber dem bisherigen Verfahren der Blutspendedienste existiert.
+Dies soll die Grundlage für die Auswahl eines effizienten Algorithmus sein, welcher im Zuge der sekundären Forschungsfrage implementiert wird.
 
 \section{Implementierung im betrieblichen Umfeld}
 In diesem Kapitel soll eine Referenzimplementierung der erarbeiteten Modelle in das betriebliche Umfeld erstellt werden.
+Hierbei handelt es sich um die sekundäre Forschungsfrage, welche klar hinter den Ressourcenbedarf der primären Forschung gestellt werden soll.\footnote{Vgl. Gliederung der Arbeit}
 
+In der Medizin sowie im betrieblichen Umfeld, funktioniert Skalierung grundsätzlich anders als in der Informatik.
+Hier bedeutet die Verdopplung der Personenzahl einen massiven Mehraufwand bei Logistik und Organisation.
 Um die ermittelte Effizienzsteigerung in der Praxis zu erreichen, müssen die Abläufe fehlerfrei ausgeführt werden.
-Bei mangelhafter Umsetzung, könnten die Fehlerrate der Testverfahren steigen oder Proben kontaminiert werden.
-Das Ergebnis wären ein Mehraufwand durch erneute Testung oder unentdeckte Fehldiagnosen.
-Eine Aufgabe der Implementierung ist es, solche Risiken für operative Fehler minimieren.
-
+Eine Aufgabe der Implementierung ist es, Risiken für operative Fehler minimieren.
 Erreicht werden kann dies durch betriebliche Abläufe, Dokumentation und die Reduzierung der Arbeitsschritte.
 Hierfür sollen praktische Empfehlungen gegeben werden.
 Zudem wird die Logistik und entstehende Kosten der Testung beschrieben.
@@ -34,13 +42,13 @@ Zudem wird die Logistik und entstehende Kosten der Testung beschrieben.
 Dieses Kapitel wird sich auf einige Standardliteratur aus den Bereichen Prozess- und Ablauforganisation stützen.
 Im Schwerpunkt handelt es sich hierbei allerdings um ein induktives Kapitel mit dem Ziel, einen Ausblick auf mögliche Implementierungsstrategien zu geben.
 Eine abschließende Behandlung der betrieblichen Abläufe wird im Rahmen der Forschungsarbeit nicht möglich sein.
-Aufgrund der Individualität jedes Unternehmens werden hier eher allgemeingültige Empfehlungen gegeben.
+Aufgrund der Individualität jedes Unternehmens sollen allgemeingültige Empfehlungen gegeben werden.
 
 \section{Zu erwartende Eigenbeiträge}
 Die wissenschaftliche Lage verändert sich im Rahmen der Corona-Pandemie nahezu täglich und es ist schwierig, hierzu einen nachhaltigen Beitrag einzubringen.
 Die vorgeschlagene Arbeit orientiert sich deshalb zwar am aktuellen Bedarf der pandemischen Lage - beschränkt sich jedoch nicht auf diesen.
-Neben den stark schwankenden Ereignissen der Pandemie werden fundierte mathematische Verfahren aus der Informatik genutzt und für medizinische Anwendungen übertragen.
-Weder das PCR-Testverfahren noch die Möglichkeiten zur Fehlerkorrektur in Daten sind neu.
-Diese Verfahren sind bewährt und werden auch nach der Pandemie noch eingesetzt werden.
+
+Weder das PCR-Testverfahren noch die Idee zum Pooling von Proben ist neu in der Pandemie entstanden.
+Diese Verfahren sind bewährt und werden auch nach der Pandemie noch zum Einsatz kommen.
 Die Forschung nutzt die Corona-Pandemie somit als Anhaltspunkt und Praxisbeispiel, in der Hoffnung einen kurzfristigen Beitrag leisten zu können.
 Die Ergebnisse sollen hierbei abstrahierbar für weitere Anwendungsfälle bleiben.

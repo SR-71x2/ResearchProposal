@@ -3,53 +3,33 @@
 \chapter{Aktueller Stand der Wissenschaft}
 \section{Das PCR-Testverfahren}
 Um die Grundlagen für spätere Kapitel zu bilden, soll zunächst die allgemeine Funktionsweise des PCR-Verfahrens erläutert werden.
-Zentrale Themen werden die Genauigkeit und Fehlerquoten der Tests sein.
 Die verfahrensüblichen Qualiätsmerkmale Sensitivität und Spezifität werden erläutert und Ablauf sowie Logistik der Testungen eingegangen.
 
 Das PCR-Verfahren existierte bereits vor der Covid19-Pandemie.
 Es wird seit 1983
-\footcite{wink_pcr_1994,S. 5}
+\footcite{wink_pcr_1994}
 zur Erkennung von Viruserkrankungen eingesetzt.
-Sowohl wissenschaftliche Literatur als auch praxisnahe Publikationen sind verfügbar.
-\footcite{clewley_polymerase_1995}
-\footcite{wehrle_weber_pcr_1994}
+Sowohl wissenschaftliche Literatur\footcite{clewley_polymerase_1995}
+als auch praxisnahe Publikationen\footcite{wehrle_weber_pcr_1994}
+sind verfügbar.
+
 Forschungsrelevante Aussagen zur Wirksamkeit und Fehlerquote der Testung werden hierbei ausschließlich auf Quellen gestützt, welche wissenschaftliche Qualitätsstandards erfüllen.
 Für betriebswirtschaftliche und ablauforganisatorische Themenbereiche wird die Einbeziehung von praxisnahe Literatur als sinnvoll erachtet.
 
-\section{Methoden der Kanalcodierung}
-Ein Forschungsgebiet der Informatik ist die Integritätsprüfung von Speichern und Signalübertragungen.
-Die Forscher entwickeln Algorithmen, für die Erkennung und Berichtigung von Fehlern.\footcite{hamming_information_1987}
-Die Anforderungen sind hierbei stark abhängig vom Anwendungsfall und der zu erwartenden Fehlerverteilung.
-Ziel ist es, den Overhead gering zu halten und zeitgleich die Integrität der Daten sicherzustellen.\footcite{blahut_algebraic_1992}
-Es muss eine Abwägung getroffen werden, in welchem Umfang Fehler und Datenverlust akzeptabel sind.
-
-Dieses Kapitel dient dazu, ein Verständnis für die Funktionsweise unterschiedlicher Codierungsverfahren zu vermitteln.
-Anhand von Beispielen werden die Unterschiede und Eigenschaften verschiedener Verfahren aufgezeigt.
-Verdeutlicht wird hierdurch, nach welchen Kriterien Codierungsverfahren bewertet und verglichen werden können.
-Aus der Kanalcodierung werden Anforderungen, Konzepte und Terminologie übernommen.\footcite{dankmeier_codierung_1994}
-Für eine Covid19-Testung werden so Rahmenbedingungen definiert, welche im folgenden Kapitel für die Optimierung genutzt werden.
-Die Funktionsprinzipien der Codierungsverfahren unterscheiden sich stark von der Medizintechnik.
-Eine direkte Implementierung ist deshalb voraussichtlich nicht möglich, was in der Arbeit geprüft und abgegrenzt wird.
-
 \section{PCR-Pooling-Verfahren}
-Dieses Kapitel kombiniert die gewonnenen Erkenntnissen über das PCR-Verfahren mit den Methodiken der Kanalcodierung.
-Sogenannten Pooling-Verfahren wurden bereits bei anderen Viruserkrankungen erfolgreich eingesetzt.
+PCR-Pooling-Verfahren wurden bereits vor der Pandemie zur Diagnose anderen Viruserkrankungen erfolgreich eingesetzt.
 \footcite{Aertzeblatt}
 Hierbei werden die Proben mehrerer Patienten vermischt, um durch einen gemeinsamen Test den Aufwand zu senken.
 Im Laufe der Pandemie wurden von vielen Forschungsgruppen und Laboren Methoden entwickelt, um PCR-Pooling durchzuführen.
 \footcite{calabrese_how_2021}
 Zur Robustheit des PCR-Verfahren gegen Verwässerung der Proben und den Skalierungsmöglichkeiten gibt es widersprüchliche Aussagen.
-\footcite{Alternative Quelle Pooling}
-Einige behaupten man könne maximal 5 Personen gemeinsam testen.
+Einige Methoden empfehlen, maximal fünf Personen gemeinsam getestet werden.
 \footcite{schmidt_novel_2020}
 Andere vermischen die Proben von 25-40 Patienten.
 \footcite{verwilt_evaluation_2021}
 Das Ärzteblatt bescheinigt den Blutspendediensten die meiste Erfahrung mit PCR-Pooling-Verfahren.
 \footcite{Aertzeblatt}
 Um Blutspenden auf HIV und Hepatitis zu testen, kommen hier seit Jahrzehnten Pooling-Verfahren zum Einsatz.
-Die Blutspendedienste haben für diese Methode ein Patent
-\footcite{roth_verfahren_2007}
-angemeldet, welches mit den Erkenntnissen anderer Forschergruppen verglichen werden soll.
 
 Der Vergleich dieser Studien und die Beschreibung der Methoden soll ein Schwerpunkt dieses Kapitels werden.
 Ein Fokus ist hierbei die Fehleranfälligkeit der Tests bei unterschiedlichen Bedingungen und Verfahren.
@@ -57,3 +37,19 @@ Ein Fokus ist hierbei die Fehleranfälligkeit der Tests bei unterschiedlichen Be
 Die wissenschaftliche Artikel, welche den Verfahren zugrunde liegen, werden aufgrund der Tagesaktualität teilweise von Pre-Print-Servern stammen.
 In diesen Fällen ist noch keinen Peer-Review erfolgt, weswegen diese Quellen besonders kritisch reflektiert und mit anderen Publikationen verglichen werden müssen.
 Die Einhaltung des wissenschaftlichen Anspruchs wird durch den Vergleich der vielen Publikationen und auf Basis der zugrundeliegenden Literatur sichergestellt.
+Eine Validierung und Plausibilisierung der Methoden ist ohnehin im Rahmen der primären Forschungsfrage vorgesehen.
+
+\section{Methoden der Kanalcodierung}
+Die Existenz dieses Kapitels in der Arbeit ist noch nicht sicher.
+Sein Zweck wäre, die theoretische Grundlage für eine argumentativ-deduktive Analyse der Pooling-Methoden zu liefern.
+Sollte diese Analyse zugunsten einer Simulation entfallen, ist dieses Kapitel obsolet.\footnote{Vgl. Gliederung der Arbeit}
+
+Ein Forschungsgebiet der Informatik ist die Integritätsprüfung von Speichern und Signalübertragungen.
+Die Forscher entwickeln Algorithmen, für die Erkennung und Berichtigung von Fehlern.\footcite{hamming_information_1987}
+Die Anforderungen sind hierbei stark abhängig vom Anwendungsfall und der zu erwartenden Fehlerverteilung.\footcite{blahut_algebraic_1992}
+
+Dieses Kapitel dient dazu, ein Verständnis für die Funktionsweise unterschiedlicher Codierungsverfahren zu vermitteln.
+Anhand von Beispielen werden die Unterschiede und Eigenschaften verschiedener Verfahren aufgezeigt.
+Verdeutlicht wird hierdurch, nach welchen Kriterien Codierungsverfahren bewertet und verglichen werden können.
+Aus der Kanalcodierung werden Anforderungen, Konzepte und Terminologie\footcite{dankmeier_codierung_1994}
+für die Analyse der Pooling-Verfahren übernommen.
